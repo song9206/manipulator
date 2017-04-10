@@ -40,7 +40,7 @@ class ManipulatorFrame(LabelFrame):
         self.master.display_status("Moving pipette to microscope position.")
         self.unit.go()
 
-    def calibrate(self):
+        def calibrate(self):
         if self.calibration_step == -1:
             self.master.display_status("Step 1"+
                                        "\nCenter pipette tip in microscope view and press 'Calibrate'.")

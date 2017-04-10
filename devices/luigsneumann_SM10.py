@@ -11,7 +11,7 @@ import binascii
 import time
 import struct
 from numpy import zeros
-
+from inputs import get_gamepad
 __all__ = ['LuigsNeumann_SM10']
 
 class LuigsNeumann_SM10(SerialDevice):
@@ -106,6 +106,7 @@ class LuigsNeumann_SM10(SerialDevice):
         axis: axis number
         x : position shift in um.
         '''
+
         x_hex = binascii.hexlify(struct.pack('>f', x))
         data = [axis, int(x_hex[6:], 16), int(x_hex[4:6], 16), int(x_hex[2:4], 16), int(x_hex[:2], 16)]
         self.send_command('004A', data, 0)
