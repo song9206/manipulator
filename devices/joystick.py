@@ -29,7 +29,7 @@ def main():
         clock.tick(60)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                print "Received event 'Quit', exiting."
+                print "Received event q'Quit', exiting."
                 keepPlaying = False
             elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                 print "Escape key pressed, exiting."
