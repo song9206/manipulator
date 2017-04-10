@@ -35,7 +35,7 @@ def main():
                 print "Escape key pressed, exiting."
                 keepPlaying = False
             elif event.type == pygame.KEYDOWN:
-                if event.key == raccourcis[0]:
+                if event.key == pygame.K_w:
                     print "Got it,", event.key
             elif event.type == pygame.KEYUP:
                 print "Keyup,", event.key
